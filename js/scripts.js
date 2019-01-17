@@ -4,13 +4,14 @@ $(document).ready(function() {
   $(".dog").hide();
   $("#form1").submit(function(event) {
   event.preventDefault();
-  var animal = $("#animal").val();
+  var animal = parseInt($("#animal").val());
+  console.log(animal);
 
-  if(animal === "Seal") {
+  if(animal === 1) {
     $(".seal").show();
     $(".giraffe").hide();
     $(".dog").hide();
-  } else if(animal === "Giraffe") {
+  } else if(animal === 2) {
     $(".giraffe").show();
     $(".dog").hide();
     $(".seal").hide();
